@@ -1,0 +1,36 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace org.opendata.biznet
+
+/**
+ * networkの参加者のmodel
+ */
+participant Organization identified by orgId {
+  o String orgId
+  o OrganizationType organizationType default="GENERAL"
+  o String name default="一般人"
+  o String address
+}
+
+/**
+ * org typeのENUM
+ */
+enum OrganizationType {
+  o LTD
+  o MUNICIPALITY
+  o ADMINISTRATION
+  o GENERAL
+}
+
+/**
+ * 公開される情報のアセット 
+ */
+asset Information identified by info {
+  o String infoId
+  o String info
+  o DateTime regDt
+  o DateTime[] updateDts
+  --> Organization owner
+}

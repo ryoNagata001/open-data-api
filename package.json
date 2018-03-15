@@ -1,0 +1,22 @@
+{
+  "name": "open-data-ver1_0_0",
+  "version": "0.0.1",
+  "description": "REST API server",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "ryoNagata001",
+  "email": "ryo.nagata@queue-inc.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "latest",
+    "composer-connector-embedded": "latest",
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest"
+  }
+}
