@@ -22,11 +22,11 @@ $ ./createPeerAdminCard.sh
 ## 3. deploy
 1. composer runtimeをinstallします。
 ```
-$ composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName tutorial-network
+$ composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName open-data-ver1_0_0
 ```
 2. ビジネスネットワークを展開します。
 ```
-$ composer network start --card PeerAdmin@hlfv1 --networkAdmin admin --networkAdminEnrollSecret adminpw --archiveFile tutorial-network@0.0.1.bna --file networkadmin.card
+$ composer network start --card PeerAdmin@hlfv1 --networkAdmin admin --networkAdminEnrollSecret adminpw --archiveFile open-data-ver1_0_0@0.0.1.bna --file networkadmin.card
 ```
 3. ネットワーク管理者IDをインポートします。
 ```
@@ -34,13 +34,13 @@ $ composer card import --file networkadmin.card
 ```
 4. 正常に展開されたか確認する。
 ```
-$ composer network ping --card admin@tutorial-network
+$ composer network ping --card admin@open-data-ver1_0_0
 ```
 
 ## 4. RESTサーバを生成する
 ```
 $ composer-rest-server
-? Enter the name of the business network card to use: admin@tutorial-network
+? Enter the name of the business network card to use: admin@open-data-ver1_0_0
 ? Specify if you want namespaces in the generated REST API: always use namespaces
 ? Specify if you want to enable authentication for the REST API using Passport: No
 ? Specify if you want to enable event publication over WebSockets: Yes
